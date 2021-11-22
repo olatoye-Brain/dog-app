@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">    
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div  class="text-center mb-3 mt-5 display-4">
+        <img src="/img/dog-logo.png" width="150px" alt="" srcset="">DOG BREED 
+    </div>
+        <div class="container">
+            <div class="row">
+                <% breeds.forEach(dog => { %>
+                    <div class="col-md-3 mb-3">
+                        <a href="breed/<%=dog.breed%>">
+                        <div class="card">
+                            <img class="card-img-top" src=<%=dog.image%> height="220px" />
+                            <div class="card-body">
+                                <div class="dog text-center text-primary"><%=dog.breed%></div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+            <div class="text-center mt-5 display-4">OTHER DOG BREEDS</div>
+            <div class="text-center">            
+                <img src="/img/otherdogs.png" width="150px" alt="" srcset="">
+            </div>
+            <div class="row">
+                    <% otherDogsBreed.forEach(dog => { %>
+                        <div class="col-md-3 mb-3"> 
+                            <a href="breed/<%=dog%>">
+                                <li class="dog list-group-item text-center text-primary"><%=dog%></li> 
+                            </a>
+                        </div>                  
+                    <% }) %>
+            </div>
+        </div>
+
+        
+    
+    
+</body>
+</html>
